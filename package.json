@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "node esbuild.config.mjs",
     "build": "node esbuild.config.mjs production",
+    "build:cli": "node esbuild.cli.mjs production",
+    "dev:cli": "node esbuild.cli.mjs",
     "test": "jest",
     "test-suite": "jest -t \"$1\"",
     "docs": "node docs.js",
@@ -14,6 +16,9 @@
     "lint": "eslint . --ext .ts --fix",
     "clear-jest": "jest --clearCache",
     "minify-css": "postcss src/styles.css -o styles.css"
+  },
+  "bin": {
+    "obsidian-linter": "./dist/obsidian-linter-cli.js"
   },
   "keywords": [],
   "author": "",
